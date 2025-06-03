@@ -25,10 +25,10 @@ Thank you for your interest in contributing to the CloudBridge Migration Toolkit
 - Follow the security guidelines in [SECURITY.md](SECURITY.md)
 
 ### **Configuration Files**
-- Only modify template files (`*.template.psd1`)
-- Keep actual config files (`MigrationConfig.psd1`) in .gitignore
+- Modify `MigrationConfig.psd1` with clear placeholder values
+- Ensure placeholders are obvious and secure (e.g., "YOUR-TENANT-ID-HERE")
 - Add clear comments for any new configuration options
-- Validate that placeholders are obvious and secure
+- Never commit real credentials or tenant-specific data
 
 ## 📋 Development Guidelines
 
@@ -61,9 +61,8 @@ Thank you for your interest in contributing to the CloudBridge Migration Toolkit
 ### **Development Setup**
 1. Clone your fork: `git clone https://github.com/your-username/CloudBridge-Migration-Toolkit.git`
 2. Create isolated test environment
-3. Copy template files for development: `Copy-Item "*.template.psd1" "*.psd1"`
-4. Configure with test tenant data
-5. Never commit actual configuration files
+3. Configure `MigrationConfig.psd1` with test tenant data
+4. Never commit actual configuration files with real credentials
 
 ### **Testing Environment**
 - Use dedicated test Azure AD tenant
@@ -127,7 +126,7 @@ Include in your PR description:
 ### **Documentation Resources**
 - [Setup Guide](SETUP.md) - Configuration instructions
 - [Security Policy](SECURITY.md) - Security guidelines
-- [Main README](AADMigration/README.md) - Feature documentation
+- [Detailed Guide](AADMigration/DETAILED-GUIDE.md) - Feature documentation
 - [Microsoft Docs](https://docs.microsoft.com/azure/) - Azure references
 
 ## 📄 License

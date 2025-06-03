@@ -6,11 +6,11 @@
 # ===================================================================
 # SENSITIVE CONFIGURATION FILES - NEVER COMMIT
 # ===================================================================
-# Actual configuration files with real credentials/tenant IDs
-AADMigration/Scripts/MigrationConfig.psd1
-**/MigrationConfig.psd1
+# Note: MigrationConfig.psd1 contains sanitized placeholder values and is safe to commit
+# Users must configure with their real values before deployment
 
 # Custom provisioning packages (may contain tenant-specific data)
+# Note: The included .ppkg file is a template - users should replace with their tenant-specific package
 AADMigration/Files/AAD-LCS-Join_PPKG.ppkg
 **/AAD-LCS-Join_PPKG.ppkg
 *.ppkg
