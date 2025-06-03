@@ -1,0 +1,81 @@
+# ===================================================================
+# CloudBridge Migration Toolkit - Git Ignore File
+# ===================================================================
+# This file prevents sensitive data from being committed to version control
+
+# ===================================================================
+# SENSITIVE CONFIGURATION FILES - NEVER COMMIT
+# ===================================================================
+# Actual configuration files with real credentials/tenant IDs
+AADMigration/Scripts/MigrationConfig.psd1
+**/MigrationConfig.psd1
+
+# Custom provisioning packages (may contain tenant-specific data)
+AADMigration/Files/AAD-LCS-Join_PPKG.ppkg
+**/AAD-LCS-Join_PPKG.ppkg
+*.ppkg
+
+# ===================================================================
+# LOG FILES AND RUNTIME DATA
+# ===================================================================
+# Migration logs (may contain sensitive system information)
+AADMigration/Logs/
+**/Logs/
+*.log
+*.txt
+
+# PowerShell transcripts
+*transcript*.txt
+
+# Windows Event Log exports
+*.evtx
+
+# ===================================================================
+# TEMPORARY AND CACHE FILES
+# ===================================================================
+# PowerShell module cache
+PSGetModuleInfo.xml
+
+# Temporary files
+*.tmp
+*.temp
+*~
+
+# Windows thumbnail cache
+Thumbs.db
+ehthumbs.db
+
+# ===================================================================
+# DEVELOPMENT AND TESTING FILES
+# ===================================================================
+# Testing configurations
+test-config.psd1
+dev-config.psd1
+local-config.psd1
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# IDE and editor files
+.vscode/settings.json
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# ===================================================================
+# BINARY AND EXECUTABLE FILES (if not needed in repo)
+# ===================================================================
+# Uncomment if you don't want to include these in the repository
+# *.exe
+# *.dll
+# *.msi
+
+# ===================================================================
+# CUSTOM ADDITIONS
+# ===================================================================
+# Add any organization-specific files that should never be committed
+# custom-tenant-*.psd1
+# company-specific-*.ps1
